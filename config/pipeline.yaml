@@ -1,0 +1,11 @@
+name: Sample Go Application Pipeline
+repository: https://github.com/yourusername/your-go-app.git
+branch: main
+build_cmd: go build -o app .
+test_cmd: go test ./...
+deploy_cmd: echo "Deploying application..."
+artifacts:
+  - app
+environment:
+  GO111MODULE: "on"
+  GOPROXY: "https://proxy.golang.org,direct"
